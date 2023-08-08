@@ -13,7 +13,9 @@
         function handleComponentFetched() {
             console.log('fetched');
 
-            $Lightning.createComponent('c:flow', {}, 'container', function(cmp) {
+            $Lightning.createComponent('c:flow', {
+                flowName: 'WizardRegistrationCreate'
+            }, 'container', function(cmp) {
                 console.log('loaded');
             })
         }
