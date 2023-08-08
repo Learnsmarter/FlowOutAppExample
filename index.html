@@ -11,10 +11,11 @@
         $Lightning.use('c:flowApp', handleComponentFetched);
 
         function handleComponentFetched() {
-            console.log('fetched');
-
-            $Lightning.createComponent('c:flow', {
-                flowName: 'WizardRegistrationCreate'
+            $Lightning.createComponent('c:searchResults', {
+                objectType: 'lsx__Program__c',
+                resultPerPage: 10,
+                searchAllOnBlank: true,
+                autoSearchPreference: 'Always'
             }, 'container', function(cmp) {
                 console.log('loaded');
             })
