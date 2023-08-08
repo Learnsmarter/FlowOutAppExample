@@ -2,6 +2,11 @@
 <html>
 <head>
     <script src="https://saas-energy-518-dev-ed.scratch.my.site.com/lightning/lightning.out.js"></script>
+</head>
+<body>
+
+    <div id="container"></div>
+
     <script>
         $Lightning.use('c:flowApp', handleComponentFetched);
 
@@ -9,14 +14,10 @@
             console.log('fetched');
 
             $Lightning.createComponent('c:flow', {}, 'container', function(cmp) {
-                alert('loaded');
+                console.log('loaded');
             })
         }
     </script>
-</head>
-<body>
-
-    <div id="container"></div>
 
 </body>
 </html>
