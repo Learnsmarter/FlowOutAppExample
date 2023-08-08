@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://saas-energy-518-dev-ed.scratch.my.site.com/lightning/lightning.out.js"></script>
+    <script>
+        $Lightning.use('c:flowApp', handleComponentFetched);
+
+        function handleComponentFetched() {
+            console.log('fetched');
+
+            $Lightning.createComponent('c:flow', {}, 'container', function(cmp) {
+                alert('loaded');
+            })
+        }
+    </script>
+</head>
+<body>
+
+    <div id="container"></div>
+
+</body>
+</html>
